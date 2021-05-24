@@ -1,28 +1,9 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import jQuery from "jquery";
-import './style.scss';
 // ドルマークに参照を代入(慣習的な $ を使うため)
 const $ = jQuery;
 
-import { helloWorld } from './js/menu';
+import './style.scss';
 
-const $fv = $('.js-fv');
+import { togggleMenu } from './js/menu';
 
-$fv.addClass('is-active');
-
-helloWorld();
-
-console.log('B');
+togggleMenu();

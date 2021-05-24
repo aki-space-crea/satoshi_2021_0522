@@ -2,6 +2,7 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HOME</title>
     <link rel="stylesheet" href="./style.css">
   </head>
@@ -13,8 +14,14 @@
           <a href="#">
           </a>
         </div>
-        <button class="nav-toggle-button"></button>
-        <nav class="top-nav">
+        <button id="js-hamburger" class="nav-toggle-button">
+          <div class="nav-toggle-button-inner">
+            <span class="js-hamburger-line hamburger-line"></span>
+            <span class="js-hamburger-line hamburger-line"></span>
+            <span class="js-hamburger-line hamburger-line"></span>
+          </div>
+        </button>
+        <nav id="js-menu" class="top-nav">
           <ul>
             <li id="tab-1" class="is-active _-home" role="tab" tabindex="0">
               <a href="#" title="このプロダクトについて">このプロダクトについて</a>
@@ -36,7 +43,6 @@
 
     <article>
       <section class="js-fv fv">
-        <div>HOME</div>
       </section>
     </article>
 

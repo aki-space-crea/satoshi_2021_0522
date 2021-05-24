@@ -1,0 +1,72 @@
+.nav-toggle-button {
+  height: 20px;
+  width: 40px;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  z-index: 9;
+  cursor: pointer;
+  transition-duration: 0.4s;
+
+  @media screen and (min-width: 1024px) {
+    opacity: 0;
+    transition-duration: 0.4s;
+  }
+
+  &-inner {
+    height: 100%;
+    position: relative;
+  }
+}
+
+.hamburger {
+  &-line {
+    position: absolute;
+    display: block;
+    height: 2px;
+    width: 30px;
+    background: #333;
+    transition-duration: 0.4s;
+
+    &:nth-child(2) {
+      top: 50%;
+    }
+
+    &:nth-child(3) {
+      top: 100%;
+    }
+  }
+}
+
+.top-nav {
+  transform: translateX(100%);
+  opacity: 0;
+  transition-duration: 0.4s;
+
+  ul {
+    transform: translateY(70px);
+
+    li {
+      cursor: pointer;
+      margin-bottom: 20px;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .top-nav {
+    transform: translateX(0);
+    opacity: 1;
+    transition-duration: 0.4s;
+
+    ul {
+      transform: translateY(0);
+
+      li {
+        cursor: pointer;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
