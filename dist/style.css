@@ -338,11 +338,158 @@ template {
   display: none;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+html {
+  font-size: 10px;
+}
+
 body {
   font-style: normal;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.5;
   margin: 0;
   padding: 0;
   position: relative;
+  font-size: 1.6rem;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #1a0dab;
+  text-decoration: none;
+}
+
+.nav-toggle-button {
+  height: 20px;
+  width: 30px;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  z-index: 999;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+@media screen and (min-width: 1024px) {
+  .nav-toggle-button {
+    opacity: 0;
+    transition-duration: 0.4s;
+  }
+}
+.nav-toggle-button-inner {
+  height: 100%;
+  position: relative;
+}
+
+.hamburger-line {
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 30px;
+  background: #333;
+  transition-duration: 0.4s;
+}
+.hamburger-line:nth-child(2) {
+  top: 50%;
+}
+.hamburger-line:nth-child(3) {
+  top: 100%;
+}
+
+.top-nav {
+  transform: translateX(100%);
+  opacity: 0;
+  transition-duration: 0.4s;
+  height: 100vh;
+  width: 80%;
+  position: fixed;
+  right: 0;
+  display: flex;
+  background: #fff;
+  z-index: 99;
+}
+.top-nav ul {
+  transform: translateY(70px);
+}
+.top-nav ul li {
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+}
+.top-nav ul a {
+  color: #333;
+}
+
+@media screen and (min-width: 1024px) {
+  .top-nav {
+    transform: translateX(0);
+    opacity: 1;
+    transition-duration: 0.4s;
+    position: absolute;
+    height: auto;
+    width: 100%;
+    background: rgba(0, 0, 0, 0);
+  }
+  .top-nav ul {
+    width: 80%;
+    transform: translateY(0);
+    display: flex;
+  }
+  .top-nav ul li {
+    cursor: pointer;
+    margin-right: 2rem;
+    margin-bottom: 0;
+    font-size: 1.6rem;
+  }
+}
+.closed-menu-bg {
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: 0.4s;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  z-index: 9;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+  .closed-menu-bg {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.top .fv {
+  position: relative;
+}
+.top .fv-inner {
+  height: 100%;
+  width: 100%;
+}
+.top .fv .main-title {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8rem;
+  color: #fff;
+}
+.top .fv-img {
+  min-height: 90vh;
+  width: 100%;
+  background: url("../images/orange.png") no-repeat;
+  background-size: cover;
 }

@@ -1,57 +1,74 @@
-import jQuery from "jquery";
-// ドルマークに参照を代入(慣習的な $ を使うため)
-const $ = jQuery;
 const breakpoint = 1024;
 let lastWW = window.innerWidth;
 
 export const togggleMenu = () => {
   class HamburgerMenuSetteikun {
     constructor(menuId) {
+      this.currentWW = 0;
+      this.isPc = () => {
+        return this.current = window.innerWidth;
+      }
+
       this.menu = document.getElementById(menuId);
-      this.menu.style.transform = 'translateX(100%)';
+      this.menu.style.transform = this.isPc() >= 1024 ? 'translateX(0%)' : 'translateX(100%)';
       this.toggleSwitch = false;
     }
 
     setBtn(btnId) {
       const btn = document.getElementById(btnId);
       const btnLines = btn.querySelectorAll('.js-hamburger-line');
+      const closedMenuBg = document.getElementById('js-closed-menu-bg');
 
       btn.addEventListener('click', () => {
         this.hideAndShow(btnLines);
       })
 
-      window.addEventListener('resize', () => {
-        let currentWW = window.innerWidth;
+      closedMenuBg.addEventListener('click', () => {
+        this.hideAndShow(btnLines);
+      })
 
-        if (lastWW <= breakpoint && breakpoint < currentWW) {
+      window.addEventListener('resize', () => {
+        const closedMenuBg = document.getElementById('js-closed-menu-bg');
+        this.currentWW = window.innerWidth;
+
+        if (lastWW <= breakpoint && breakpoint < this.currentWW) {
           //PCの処理
           this.menu.style.transform = 'translateX(0%)';
           this.menu.style.opacity = 1;
           this.resetHamburgerLine(btnLines);
           this.toggleSwitch = false;
-        } else if (currentWW <= breakpoint && breakpoint < lastWW) {
+          closedMenuBg.style.opacity = 0;
+          closedMenuBg.style.visibility = 'hidden';
+        } else if (this.currentWW <= breakpoint && breakpoint < lastWW) {
           //SPの処理
           this.menu.style.transform = 'translateX(100%)';
           this.menu.style.opacity = 0;
           this.resetHamburgerLine(btnLines);
           this.toggleSwitch = false;
+          closedMenuBg.style.visibility = 'visible';
         }
 
-        lastWW = currentWW;
+        lastWW = this.currentWW;
       });
     }
 
     hideAndShow(btnLines) {
+      const closedMenuBg = document.getElementById('js-closed-menu-bg');
+
       if (this.toggleSwitch === false) {
         this.menu.style.transform = 'translateX(0%)';
         this.menu.style.opacity = 1;
         this.rotateHamburgerLine(btnLines);
         this.toggleSwitch = true;
+        closedMenuBg.style.opacity = 1;
+        closedMenuBg.style.visibility = 'visible';
       } else {
         this.menu.style.transform = 'translateX(100%)';
         this.menu.style.opacity = 0;
         this.resetHamburgerLine(btnLines);
         this.toggleSwitch = false;
+        closedMenuBg.style.opacity = 0;
+        closedMenuBg.style.visibility = 'hidden';
       }
     }
 
