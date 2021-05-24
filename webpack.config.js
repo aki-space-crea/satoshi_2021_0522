@@ -36,7 +36,7 @@ module.exports = {
                 // CSSをバンドルするための機能
                 {
                     loader: "css-loader",
-                    options: { 
+                    options: {
                         // オプションでCSS内のurl()メソッドの取り込みを禁止する
                         url: false,
                         // ソースマップを有効にする

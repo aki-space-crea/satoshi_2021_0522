@@ -1,4 +1,14 @@
-@import './scss/normalize.scss';
-@import './scss/common.scss';
-@import './scss/header.scss';
-@import './scss/footer.scss';
+@import './scss/_normalize.scss';
+@import './scss/_common.scss';
+@import './scss/_header.scss';
+@import './scss/_footer.scss';
+
+
+body {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
