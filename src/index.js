@@ -3,7 +3,8 @@ import jQuery from "jquery";
 const $ = jQuery;
 
 import './style.scss';
-
 import { togggleMenu } from './js/menu';
+import { scrollAnimation } from './js/_scrollFadeAnimation';
 
 togggleMenu();
+scrollAnimation();
