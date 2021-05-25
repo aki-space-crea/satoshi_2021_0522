@@ -45,7 +45,7 @@ export const togggleMenu = () => {
           this.menu.style.opacity = 0;
           this.resetHamburgerLine(btnLines);
           this.toggleSwitch = false;
-          closedMenuBg.style.visibility = 'visible';
+          closedMenuBg.style.visibility = 'hidden';
         }
 
         lastWW = this.currentWW;

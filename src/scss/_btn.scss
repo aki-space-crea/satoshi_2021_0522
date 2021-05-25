@@ -1,0 +1,26 @@
+.btn {
+  display: block;
+  padding: 10px 15px;
+  border: 1px solid #333;
+  border-radius: 30px;
+  font-size: 1.4rem;
+  transition-duration: 0.4s;
+
+  &-icon {
+    height: 10px;
+    width: 10px;
+    border-radius: 10px;
+    display: inline-block;
+  }
+
+  &-txt {
+    display: inline-block;
+  }
+
+  &:hover {
+    transition-duration: 0.4s;
+    border: 1px solid rgba(0, 0, 0, 0);
+    background: #333;
+    color: #fff;
+  }
+}

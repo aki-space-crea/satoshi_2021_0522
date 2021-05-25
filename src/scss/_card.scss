@@ -1,0 +1,31 @@
+$transition : 0.4s;
+
+.card {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+
+  cursor: pointer;
+  transition-duration: $transition;
+  box-sizing: border-box;
+
+  &-inner {
+    padding: 10px;
+  }
+
+  &-img {
+
+  }
+
+  &-txt {
+    p {
+      display: block;
+      word-wrap: break-word; /* IE11用 */
+      overflow-wrap: break-word;
+    }
+  }
+
+  &:hover {
+    transition-duration: $transition;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
