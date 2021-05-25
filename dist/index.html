@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body class="top">
+    <a class="skip" href="#main" tabindex="0"></a>
     <!-- header -->
     <header class="header">
       <div class="header-inner">
@@ -25,16 +26,16 @@
     </button>
     <nav id="js-menu" class="top-nav">
       <ul>
-        <li id="tab-1" class="is-active _-home" role="tab" tabindex="0">
+        <li id="tab-1" class="is-active _-home" role="tab" tabindex="-1">
           <a href="#" title="このプロダクトについて">このプロダクトについて</a>
         </li>
-        <li id="tab-2" class="_-products" role="tab" tabindex="-1">
+        <li id="tab-2" class="_-products" role="tab" tabindex="-2">
           <a href="#" class="header-link-products">プロダクト</a>
         </li>
-        <li id="tab-3" class="_-commitments" role="tab" tabindex="-2">
+        <li id="tab-3" class="_-commitments" role="tab" tabindex="-3">
           <a href="#" class="header-link-commitments">取り組み</a>
         </li>
-        <li id="tab-4" class="_-stories" role="tab" tabindex="-3">
+        <li id="tab-4" class="_-stories" role="tab" tabindex="-4">
           <a href="#" class="header-link-stories">ストーリー</a>
         </li>
       </ul>
@@ -42,101 +43,104 @@
     <div id="js-closed-menu-bg" class="closed-menu-bg"></div>
     <!-- // header -->
 
-    <article>
+    <div>
       <section class="js-fv fv">
         <div class="fv-inner">
           <h1 class="main-title">Hello World!!</h1>
           <div class="fv-img"></div>
         </div>
       </section>
-      <section class="main-content">
-        <ul class="list --card">
-          <li class="js-fade" role="tab" tabindex="-4">
-            <div class="card">
-              <div class="card-inner">
-                <div class="card-img">
-                  <img src="" alt="xxxxxxxx">
-                </div>
-                <div class="card-txt">
-                  <p>xxxxxxxxxxxxxxxxxxxx</p>
-                </div>
-                <div class="card-btn">
-                  <!-- button -->
-                  <button onclick="location.href='#'" class="btn">
-                    <span class="btn-icon"></span>
-                    <span class="btn-txt">ボタン</span>
-                  </button>
-                  <!-- // button -->
-                </div>
-              </div>
-            </div>
-          </li>
-
-          <li class="js-fade" role="tab" tabindex="-5">
-            <div class="card">
-              <div class="card-inner">
-                <div class="card-img">
-                  <img src="" alt="xxxxxxxx">
-                </div>
-                <div class="card-txt">
-                  <p>xxxxxxxxxxxxxxxxxxxx</p>
-                </div>
-                <div class="card-btn">
+      <main id="main">
+        <section class="main-content">
+          <h2 class="sub-title">testtest</h2>
+          <ul class="list --card">
+            <li class="js-fade" role="tab" tabindex="-5">
+              <div class="card">
+                <div class="card-inner">
+                  <div class="card-img">
+                    <img src="" alt="xxxxxxxx">
+                  </div>
+                  <div class="card-txt">
+                    <p>xxxxxxxxxxxxxxxxxxxx</p>
+                  </div>
+                  <div class="card-btn">
                     <!-- button -->
                     <button onclick="location.href='#'" class="btn">
                       <span class="btn-icon"></span>
                       <span class="btn-txt">ボタン</span>
                     </button>
                     <!-- // button -->
+                  </div>
                 </div>
               </div>
-            </div>
-          </li>
+            </li>
 
-          <li class="js-fade" role="tab" tabindex="-6">
-            <div class="card">
-              <div class="card-inner">
-                <div class="card-img">
-                  <img src="" alt="xxxxxxxx">
-                </div>
-                <div class="card-txt">
-                  <p>xxxxxxxxxxxxxxxxxxxx</p>
-                </div>
-                <div class="card-btn">
-                    <!-- button -->
-                    <button onclick="location.href='#'" class="btn">
-                      <span class="btn-icon"></span>
-                      <span class="btn-txt">ボタン</span>
-                    </button>
-                    <!-- // button -->
+            <li class="js-fade" role="tab" tabindex="-6">
+              <div class="card">
+                <div class="card-inner">
+                  <div class="card-img">
+                    <img src="" alt="xxxxxxxx">
+                  </div>
+                  <div class="card-txt">
+                    <p>xxxxxxxxxxxxxxxxxxxx</p>
+                  </div>
+                  <div class="card-btn">
+                      <!-- button -->
+                      <button onclick="location.href='#'" class="btn">
+                        <span class="btn-icon"></span>
+                        <span class="btn-txt">ボタン</span>
+                      </button>
+                      <!-- // button -->
+                  </div>
                 </div>
               </div>
-            </div>
-          </li>
+            </li>
 
-          <li class="js-fade" role="tab" tabindex="-7">
-            <div class="card">
-              <div class="card-inner">
-                <div class="card-img">
-                  <img src="" alt="xxxxxxxx">
-                </div>
-                <div class="card-txt">
-                  <p>xxxxxxxxxxxxxxxxxxxx</p>
-                </div>
-                <div class="card-btn">
-                    <!-- button -->
-                    <button onclick="location.href='#'" class="btn">
-                      <span class="btn-icon"></span>
-                      <span class="btn-txt">ボタン</span>
-                    </button>
-                    <!-- // button -->
+            <li class="js-fade" role="tab" tabindex="-7">
+              <div class="card">
+                <div class="card-inner">
+                  <div class="card-img">
+                    <img src="" alt="xxxxxxxx">
+                  </div>
+                  <div class="card-txt">
+                    <p>xxxxxxxxxxxxxxxxxxxx</p>
+                  </div>
+                  <div class="card-btn">
+                      <!-- button -->
+                      <button onclick="location.href='#'" class="btn">
+                        <span class="btn-icon"></span>
+                        <span class="btn-txt">ボタン</span>
+                      </button>
+                      <!-- // button -->
+                  </div>
                 </div>
               </div>
-            </div>
-          </li>
-        </ul>
-      </section>
-    </article>
+            </li>
+
+            <li class="js-fade" role="tab" tabindex="-8">
+              <div class="card">
+                <div class="card-inner">
+                  <div class="card-img">
+                    <img src="" alt="xxxxxxxx">
+                  </div>
+                  <div class="card-txt">
+                    <p>xxxxxxxxxxxxxxxxxxxx</p>
+                  </div>
+                  <div class="card-btn">
+                      <!-- button -->
+                      <button onclick="location.href='#'" class="btn">
+                        <span class="btn-icon"></span>
+                        <span class="btn-txt">ボタン</span>
+                      </button>
+                      <!-- // button -->
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
 
     <!-- footer -->
     <footer class="footer">

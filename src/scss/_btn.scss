@@ -23,4 +23,11 @@
     background: #333;
     color: #fff;
   }
+
+  &:focus {
+    transition-duration: 0.4s;
+    border: 1px solid rgba(0, 0, 0, 0);
+    background: #333;
+    color: #fff;
+  }
 }

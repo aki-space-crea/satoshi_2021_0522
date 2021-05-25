@@ -556,6 +556,10 @@ a {
   /* IE11用 */
   overflow-wrap: break-word;
 }
+.card-btn {
+  display: flex;
+  justify-content: flex-end;
+}
 .card:hover {
   transition-duration: 0.4s;
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
@@ -564,6 +568,7 @@ a {
 .list.--card {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .list.--card li {
   width: 45%;
