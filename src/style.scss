@@ -1,3 +1,6 @@
+$transition: 0.4s;
+$shadow: 0 6px 10px 0 rgb(0 0 0 / 50%);
+
 @import './scss/_normalize.scss';
 @import './scss/_common.scss';
 @import './scss/_header.scss';
@@ -7,3 +10,5 @@
 @import './scss/_btn.scss';
 @import './scss/_card.scss';
 @import './scss/_list.scss';
+@import './scss/_targetFade.scss';
+@import './scss/_tab.scss';

@@ -362,6 +362,7 @@ body {
   padding: 0;
   position: relative;
   font-size: 1.6rem;
+  height: 5000px;
 }
 
 ul {
@@ -414,12 +415,12 @@ a:focus {
   right: 20px;
   z-index: 999;
   cursor: pointer;
-  transition-duration: 0.4;
+  transition-duration: 0.4s;
 }
 @media screen and (min-width: 1024px) {
   .nav-toggle-button {
     opacity: 0;
-    transition-duration: 0.4;
+    transition-duration: 0.4s;
   }
 }
 .nav-toggle-button-inner {
@@ -433,7 +434,7 @@ a:focus {
   height: 2px;
   width: 30px;
   background: #333;
-  transition-duration: 0.4;
+  transition-duration: 0.4s;
 }
 .hamburger-line:nth-child(2) {
   top: 50%;
@@ -445,7 +446,7 @@ a:focus {
 .top-nav {
   transform: translateX(100%);
   opacity: 0;
-  transition-duration: 0.4;
+  transition-duration: 0.4s;
   height: 100vh;
   width: 80%;
   position: fixed;
@@ -471,7 +472,7 @@ a:focus {
   .top-nav {
     transform: translateX(0);
     opacity: 1;
-    transition-duration: 0.4;
+    transition-duration: 0.4s;
     position: absolute;
     height: auto;
     width: 100%;
@@ -492,7 +493,7 @@ a:focus {
 .closed-menu-bg {
   opacity: 0;
   visibility: hidden;
-  transition-duration: 0.4;
+  transition-duration: 0.4s;
   height: 100vh;
   width: 100%;
   background: rgba(0, 0, 0, 0.7);
@@ -597,4 +598,84 @@ a:focus {
 }
 .list.--card li:-nth-child(2n) {
   margin-right: 0;
+}
+
+.target-fade {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-100px);
+}
+.target-fade.is-active {
+  -webkit-animation: fadeIn 1s ease forwards;
+          animation: fadeIn 1s ease forwards;
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0px);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0px);
+  }
+}
+
+.tab {
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+.tab input {
+  display: none;
+}
+.tab input:checked + label {
+  color: #fff;
+  background: #333;
+}
+.tab input:checked + label + .tab-content {
+  padding: 15px;
+  height: auto;
+  overflow: auto;
+  transition: 0.4s;
+  opacity: 1;
+}
+.tab label {
+  display: inline-block;
+  text-align: center;
+  border-bottom: 1px solid #333;
+  border-radius: 5px 5px 0 0;
+  box-sizing: border-box;
+  width: 33%;
+  min-width: 33%;
+  padding: 10px 0;
+  transition: 0.4s;
+  flex: 1;
+  order: -1;
+}
+.tab label:hover {
+  color: #fff;
+  background: #333;
+  transition: 0.4s;
+}
+.tab-content {
+  padding: 0 15px;
+  height: 0;
+  width: 100%;
+  opacity: 0;
+  overflow: hidden;
 }
