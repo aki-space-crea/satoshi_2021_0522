@@ -13,11 +13,14 @@
     }
 
     &:checked + label + .tab-content {
-      padding: 15px;
       height: auto;
       overflow: auto;
       transition: $transition;
       opacity: 1;
+
+      p {
+        padding: 15px;
+      }
     }
   }
 
@@ -42,10 +45,14 @@
   }
 
   &-content {
-    padding: 0 15px;
     height: 0;
     width: 100%;
     opacity: 0;
     overflow: hidden;
+
+    p {
+      display: block;
+      padding: 0 15px;
+    }
   }
 }
