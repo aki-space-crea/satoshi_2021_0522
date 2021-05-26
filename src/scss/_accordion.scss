@@ -1,0 +1,66 @@
+.accordion {
+  box-shadow: $shadow;
+
+  button {
+    border-bottom: 1px solid $black;
+    padding: 15px 10px;
+    display: block;
+    font-weight: bold;
+    width: 100%;
+    text-align: left;
+
+    &.is-active {
+      background: $black;
+      color: $white;
+      transition: $transition;
+
+      + .accordion-content {
+        height: auto;
+        overflow: auto;
+        transition: $transition;
+        opacity: 1;
+        border-bottom: 1px solid #333;
+        animation: stretch 0.4s ease forwards;
+      }
+    }
+
+    &.is-disabled {
+      + .accordion-content {
+        animation: reverseStretch 0.4s ease forwards;
+      }
+    }
+  }
+
+  &-content {
+    height: 0;
+    width: 100%;
+    opacity: 0;
+    overflow: hidden;
+    transition: $transition;
+    padding: 0 15px;
+
+    p {
+      display: block;
+    }
+  }
+
+  @keyframes stretch {
+    0% {
+      padding: 0 15px;
+    }
+
+    100% {
+      padding: 15px;
+    }
+  }
+
+  @keyframes reverseStretch {
+    0% {
+      padding: 15px;
+    }
+
+    100% {
+      padding: 0 15px;
+    }
+  }
+}

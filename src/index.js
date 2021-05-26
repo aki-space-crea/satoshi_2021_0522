@@ -3,8 +3,10 @@ import jQuery from "jquery";
 const $ = jQuery;
 
 import './style.scss';
-import { togggleMenu } from './js/menu';
+import { togggleMenu } from './js/_menu';
 import { scrollAnimation } from './js/_scrollFadeAnimation';
+import { clickedToggle } from './js/_clickedToggle';
 
 togggleMenu();
 scrollAnimation();
+clickedToggle();

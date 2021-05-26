@@ -1,3 +1,6 @@
+$white: #fff;
+$black: #333;
+$gray: #dadce0;
 $transition: 0.4s;
 $shadow: 0 6px 10px 0 rgb(0 0 0 / 50%);
 
@@ -12,3 +15,4 @@ $shadow: 0 6px 10px 0 rgb(0 0 0 / 50%);
 @import './scss/_list.scss';
 @import './scss/_targetFade.scss';
 @import './scss/_tab.scss';
+@import './scss/_accordion.scss';

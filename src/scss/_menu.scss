@@ -49,6 +49,8 @@
   display: flex;
   background: #fff;
   z-index: 99;
+  padding: 10px;
+  box-sizing: border-box;
 
   ul {
     transform: translateY(70px);
