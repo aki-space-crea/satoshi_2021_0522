@@ -44,16 +44,19 @@
     <!-- // header -->
 
     <div>
+      <!-- ファーストビュー -->
       <section class="js-fv fv">
         <div class="fv-inner">
           <h1 class="main-title">Hello World!!</h1>
           <div class="fv-img"></div>
         </div>
       </section>
+      <!-- // ファーストビュー -->
       <main id="main">
         <section class="main-content">
-          <h2 class="sub-title">testtest</h2>
+          <h2 class="secondly-ttl">testtest</h2>
           <ul class="list --card">
+            <!-- card -->
             <li class="js-fade" role="tab" tabindex="-5">
               <div class="card">
                 <div class="card-inner">
@@ -74,7 +77,9 @@
                 </div>
               </div>
             </li>
+            <!-- // card -->
 
+            <!-- card -->
             <li class="js-fade" role="tab" tabindex="-6">
               <div class="card">
                 <div class="card-inner">
@@ -95,7 +100,9 @@
                 </div>
               </div>
             </li>
+            <!-- // card -->
 
+            <!-- card -->
             <li class="js-fade" role="tab" tabindex="-7">
               <div class="card">
                 <div class="card-inner">
@@ -116,7 +123,9 @@
                 </div>
               </div>
             </li>
+            <!-- // card -->
 
+            <!-- card -->
             <li class="js-fade" role="tab" tabindex="-8">
               <div class="card">
                 <div class="card-inner">
@@ -137,7 +146,34 @@
                 </div>
               </div>
             </li>
+            <!-- // card -->
           </ul>
+
+          <h2 class="secondly-ttl">tab</h2>
+          <div>
+            <!-- tab -->
+
+            <div class="tab">
+              <input id="tab1" type="radio" name="tab" checked="checked">
+              <label role="tab" aria-controls="panel1" for="tab1" aria-selected="true">tab1</label>
+              <div id="panel1" class="tab-content" role="tabpanel1" aria-hidden="true">
+                tab1コンテンツ
+              </div>
+
+              <input id="tab2" type="radio" name="tab">
+              <label role="tab" aria-controls="panel2" for="tab2" aria-selected="true">tab2</label>
+              <div id="panel2" class="tab-content" role="tabpanel2" aria-hidden="true">
+                tab2コンテンツ
+              </div>
+
+              <input id="tab3" type="radio" name="tab">
+              <label role="tab" aria-controls="panel3" for="tab3" aria-selected="true">tab3</label>
+              <div id="panel1" class="tab-content" role="tabpanel3" aria-hidden="true">
+                tab3コンテンツ
+              </div>
+            </div>
+            <!-- // tab -->
+          </div>
         </section>
       </main>
     </div>
