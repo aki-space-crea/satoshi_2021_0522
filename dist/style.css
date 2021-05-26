@@ -396,6 +396,10 @@ a:focus {
   transition: 0.4s;
 }
 
+label {
+  cursor: pointer;
+}
+
 .main-content {
   padding: 0 15px;
   max-width: 1024px;
@@ -449,6 +453,8 @@ a:focus {
   display: flex;
   background: #fff;
   z-index: 99;
+  padding: 10px;
+  box-sizing: border-box;
 }
 .top-nav ul {
   transform: translateY(70px);
@@ -678,4 +684,77 @@ a:focus {
 .tab-content p {
   display: block;
   padding: 0 15px;
+}
+
+.accordion {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+}
+.accordion button {
+  border-bottom: 1px solid #333;
+  padding: 15px 10px;
+  display: block;
+  font-weight: bold;
+  width: 100%;
+  text-align: left;
+}
+.accordion button.is-active {
+  background: #333;
+  color: #fff;
+  transition: 0.4s;
+}
+.accordion button.is-active + .accordion-content {
+  height: auto;
+  overflow: auto;
+  transition: 0.4s;
+  opacity: 1;
+  border-bottom: 1px solid #333;
+  -webkit-animation: stretch 0.4s ease forwards;
+          animation: stretch 0.4s ease forwards;
+}
+.accordion button.is-disabled + .accordion-content {
+  -webkit-animation: reverseStretch 0.4s ease forwards;
+          animation: reverseStretch 0.4s ease forwards;
+}
+.accordion-content {
+  height: 0;
+  width: 100%;
+  opacity: 0;
+  overflow: hidden;
+  transition: 0.4s;
+  padding: 0 15px;
+}
+.accordion-content p {
+  display: block;
+}
+@-webkit-keyframes stretch {
+  0% {
+    padding: 0 15px;
+  }
+  100% {
+    padding: 15px;
+  }
+}
+@keyframes stretch {
+  0% {
+    padding: 0 15px;
+  }
+  100% {
+    padding: 15px;
+  }
+}
+@-webkit-keyframes reverseStretch {
+  0% {
+    padding: 15px;
+  }
+  100% {
+    padding: 0 15px;
+  }
+}
+@keyframes reverseStretch {
+  0% {
+    padding: 15px;
+  }
+  100% {
+    padding: 0 15px;
+  }
 }
