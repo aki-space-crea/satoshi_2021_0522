@@ -54,7 +54,7 @@
       <!-- // ファーストビュー -->
       <main id="main">
         <section class="main-content">
-          <h2 class="secondly-ttl">card</h2>
+          <h2 class="secondly-ttl side-padding">card</h2>
           <ul class="list --card">
             <!-- card -->
             <li class="js-fade" role="tab" tabindex="-5">
@@ -149,10 +149,9 @@
             <!-- // card -->
           </ul>
 
-          <h2 class="secondly-ttl">tab</h2>
-          <div>
+          <h2 class="secondly-ttl side-padding">tab</h2>
+          <div class="side-padding">
             <!-- tab -->
-
             <div class="tab">
               <input id="tab1" type="radio" name="tab" checked="checked">
               <label role="tab" aria-controls="panel1" for="tab1" aria-selected="true">tab1</label>
@@ -176,8 +175,8 @@
           </div>
 
           <!-- accordion -->
-          <h2 class="secondly-ttl">accordion</h2>
-          <div>
+          <h2 class="secondly-ttl side-padding">accordion</h2>
+          <div class="side-padding">
             <div class="accordion">
               <button class="js-accordion" role="accordion" aria-controls="panel1" aria-selected="true">tab1</button>
               <div class="accordion-content" role="tabpanel1" aria-hidden="true">
@@ -209,6 +208,10 @@
       </div>
     </footer>
     <!-- // footer -->
+    <div id="js-loading" class="loading">
+      <div class="loading-img"></div>
+      <p>Now Loading...</p>
+    </div>
     <script src="./main.js"></script>
   </body>
 </html>

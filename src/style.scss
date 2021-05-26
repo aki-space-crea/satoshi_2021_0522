@@ -3,6 +3,7 @@ $black: #333;
 $gray: #dadce0;
 $transition: 0.4s;
 $shadow: 0 6px 10px 0 rgb(0 0 0 / 50%);
+$sidePadding: 0 15px;
 
 @import './scss/_normalize.scss';
 @import './scss/_common.scss';

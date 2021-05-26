@@ -400,10 +400,64 @@ label {
   cursor: pointer;
 }
 
-.main-content {
+.side-padding {
   padding: 0 15px;
+}
+
+.main-content {
   max-width: 1024px;
   margin: 0 auto;
+}
+
+.secondly-ttl.side-padding {
+  padding: 0 15px;
+}
+
+.loading {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 99999999;
+  background: linear-gradient(45deg, #afa, #aaf, #afa);
+  background-size: 400% 400%;
+  -webkit-animation: moveGradient 10s ease infinite;
+          animation: moveGradient 10s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading.is-disabled {
+  transition: 0.4s;
+  opacity: 0;
+  visibility: hidden;
+}
+.loading p {
+  color: #fff;
+  font-size: 5rem;
+  font-family: "Avenir", sans-serif;
+}
+@-webkit-keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .nav-toggle-button {
@@ -641,6 +695,14 @@ label {
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
   border-radius: 5px;
 }
+.tab.side-padding {
+  padding: 0 15px;
+}
+@media screen and (min-width: 1024px) {
+  .tab {
+    padding: 0;
+  }
+}
 .tab input {
   display: none;
 }
@@ -689,6 +751,14 @@ label {
 .accordion {
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
 }
+.accordion.side-padding {
+  padding: 0 15px;
+}
+@media screen and (min-width: 1024px) {
+  .accordion.side-padding {
+    padding: 0;
+  }
+}
 .accordion button {
   border-bottom: 1px solid #333;
   padding: 15px 10px;
@@ -696,6 +766,11 @@ label {
   font-weight: bold;
   width: 100%;
   text-align: left;
+}
+.accordion button:hover {
+  background: #333;
+  color: #fff;
+  transition: 0.4s;
 }
 .accordion button.is-active {
   background: #333;
@@ -717,7 +792,6 @@ label {
 }
 .accordion-content {
   height: 0;
-  width: 100%;
   opacity: 0;
   overflow: hidden;
   transition: 0.4s;

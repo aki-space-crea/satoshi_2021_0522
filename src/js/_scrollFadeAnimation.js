@@ -22,7 +22,7 @@ export const scrollAnimation = () => {
 
           if (target === '.js-fade-in-under-line' || target === '.js-show-graph') {
             (function(pram) {
-              setTimeout(function() {
+              setTimeout(() => {
                 el[pram].classList.add('is-active');
               }, pram * 50);
             })(i);

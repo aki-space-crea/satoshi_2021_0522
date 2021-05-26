@@ -1,6 +1,16 @@
 .accordion {
   box-shadow: $shadow;
 
+  &.side-padding {
+    padding: $sidePadding;
+  }
+
+  @media screen and (min-width: 1024px) {
+    &.side-padding {
+      padding: 0;
+    }
+  }
+
   button {
     border-bottom: 1px solid $black;
     padding: 15px 10px;
@@ -8,6 +18,12 @@
     font-weight: bold;
     width: 100%;
     text-align: left;
+
+    &:hover {
+      background: $black;
+      color: $white;
+      transition: $transition;
+    }
 
     &.is-active {
       background: $black;
@@ -33,7 +49,6 @@
 
   &-content {
     height: 0;
-    width: 100%;
     opacity: 0;
     overflow: hidden;
     transition: $transition;

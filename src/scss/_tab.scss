@@ -4,6 +4,14 @@
   box-shadow: $shadow;
   border-radius: 5px;
 
+  &.side-padding {
+    padding: $sidePadding;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 0;
+  }
+
   input {
     display: none;
 
