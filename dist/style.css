@@ -386,6 +386,18 @@ li {
 a {
   color: #1a0dab;
   text-decoration: none;
+  transition: 0.4s;
+}
+a:hover {
+  text-decoration: underline;
+  transition: 0.4s;
+}
+a:focus {
+  text-decoration: underline;
+  outline: none;
+  font-weight: bold;
+  transform: translateY(-3px);
+  transition: 0.4s;
 }
 
 .main-content {
@@ -402,12 +414,12 @@ a {
   right: 20px;
   z-index: 999;
   cursor: pointer;
-  transition-duration: 0.4s;
+  transition-duration: 0.4;
 }
 @media screen and (min-width: 1024px) {
   .nav-toggle-button {
     opacity: 0;
-    transition-duration: 0.4s;
+    transition-duration: 0.4;
   }
 }
 .nav-toggle-button-inner {
@@ -421,7 +433,7 @@ a {
   height: 2px;
   width: 30px;
   background: #333;
-  transition-duration: 0.4s;
+  transition-duration: 0.4;
 }
 .hamburger-line:nth-child(2) {
   top: 50%;
@@ -433,7 +445,7 @@ a {
 .top-nav {
   transform: translateX(100%);
   opacity: 0;
-  transition-duration: 0.4s;
+  transition-duration: 0.4;
   height: 100vh;
   width: 80%;
   position: fixed;
@@ -452,13 +464,14 @@ a {
 }
 .top-nav ul a {
   color: #333;
+  display: block;
 }
 
 @media screen and (min-width: 1024px) {
   .top-nav {
     transform: translateX(0);
     opacity: 1;
-    transition-duration: 0.4s;
+    transition-duration: 0.4;
     position: absolute;
     height: auto;
     width: 100%;
@@ -479,7 +492,7 @@ a {
 .closed-menu-bg {
   opacity: 0;
   visibility: hidden;
-  transition-duration: 0.4s;
+  transition-duration: 0.4;
   height: 100vh;
   width: 100%;
   background: rgba(0, 0, 0, 0.7);
@@ -534,6 +547,12 @@ a {
   display: inline-block;
 }
 .btn:hover {
+  transition-duration: 0.4s;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background: #333;
+  color: #fff;
+}
+.btn:focus {
   transition-duration: 0.4s;
   border: 1px solid rgba(0, 0, 0, 0);
   background: #333;
