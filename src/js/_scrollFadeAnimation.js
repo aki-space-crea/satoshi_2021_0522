@@ -1,7 +1,7 @@
 export const scrollAnimation = () => {
   // targetはclass名のみ対応。
   const getTargetPos = function (target) {
-    const el = Array.from(document.querySelectorAll(target));
+    const el = document.querySelectorAll(target).slice.call(el);
     const elLength = el.length;
     const windowHeight = window.innerHeight;
 
