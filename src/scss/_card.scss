@@ -11,7 +11,10 @@
   }
 
   &-img {
-
+    min-height: 200px;
+    width: 100%;
+    background: url('../images/orange.png') no-repeat;
+    background-size: cover;
   }
 
   &-txt {

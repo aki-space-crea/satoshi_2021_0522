@@ -1,17 +1,21 @@
 .list {
   &.--card {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
 
     li {
-      width: 45%;
+      width: 48%;
       max-width: 500px;
       min-width: 135px;
       margin: 10px;
 
-      &:-nth-child(2n) {
-        margin-right: 0;
+      &:nth-child(2n-1) {
+        margin: 10px 10px 0 0;
+      }
+
+      &:nth-child(2n) {
+        margin: 10px 0;
       }
     }
   }
