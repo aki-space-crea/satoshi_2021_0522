@@ -1,0 +1,74 @@
+.slider {
+  &.-toppage {
+    .container {
+      width: 100%;
+      min-height: 300px;
+    }
+
+    .list {
+    }
+
+    .item {
+    }
+
+    a {
+      display: block;
+      background: url('../images/orange.png') no-repeat;
+      background-size: cover;
+      color: $white;
+      min-height: 300px;
+      position: relative;
+      transition: $transition;
+
+      &:hover {
+        &::before {
+          opacity: 1;
+          visibility: visible;
+          transition: $transition;
+        }
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        background: rgba(0, 0, 0, 0.2);
+        height: 100%;
+        width: 100%;
+        transition: $transition;
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      p {
+        position: absolute;
+        left: 15px;
+        bottom: 15px;
+      }
+    }
+
+    .btn {
+      color: $white;
+      border-radius: 50%;
+      height: 30px;
+      width: 30px;
+      box-sizing: border-box;
+      padding: 10px;
+      border: 1px solid #fff;
+      background: rgba(0, 0, 0, 0);
+      transition: $transition;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.4);
+        border: 0;
+        transition: $transition;
+      }
+
+      &::before,
+      &::after {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}

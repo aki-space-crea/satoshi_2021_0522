@@ -81,6 +81,8 @@ module.exports = {
             {
                 // 拡張子 .js の場合
                 test: /\.js$/,
+                // IE対応 除外設定にSwiperを含めない
+                exclude: /node_modules\/(?!(dom7|ssr-window|swiper)\/).*/,
                 use: [
                     {
                         // Babel を利用する
