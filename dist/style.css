@@ -1016,7 +1016,6 @@ body {
   padding: 0;
   position: relative;
   font-size: 1.6rem;
-  height: 5000px;
 }
 
 ul {
@@ -1063,6 +1062,43 @@ label {
   margin: 0 auto;
 }
 
+.scroll-down {
+  -webkit-animation: infiniteScrollDown ease 1.3s infinite;
+          animation: infiniteScrollDown ease 1.3s infinite;
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  z-index: 9;
+  transform: translateY(-50%);
+}
+.scroll-down::before, .scroll-down::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+.scroll-down::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+@-webkit-keyframes infiniteScrollDown {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes infiniteScrollDown {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
 .breadcrumb {
   display: flex;
   justify-content: flex-start;
@@ -1083,8 +1119,8 @@ label {
   z-index: 99999999;
   background: linear-gradient(45deg, #afa, #aaf, #afa);
   background-size: 400% 400%;
-  -webkit-animation: moveGradient 10s ease infinite;
-          animation: moveGradient 10s ease infinite;
+  -webkit-animation: moveGradient 10s ease-in infinite;
+          animation: moveGradient 10s ease-in infinite;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1120,6 +1156,63 @@ label {
   100% {
     background-position: 0% 50%;
   }
+}
+
+.footer {
+  font-size: 1.4rem;
+  background: #333;
+  margin-top: 100px;
+}
+.footer-inner {
+  box-sizing: border-box;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 30px 15px;
+  display: flex;
+  align-items: flex-start;
+}
+.footer a {
+  display: block;
+}
+.footer .social {
+  display: flex;
+  align-items: center;
+  margin-right: 150px;
+}
+.footer .social li {
+  display: block;
+  margin-right: 30px;
+}
+.footer .social li:last-child {
+  margin: 0;
+}
+.footer .social a {
+  color: #fff;
+}
+.footer .social a .fa-twitter {
+  font-size: 2.1rem;
+}
+.footer .social a .fa-instagram {
+  font-size: 2.3rem;
+}
+.footer .social a .fa-facebook-f {
+  font-size: 1.9rem;
+}
+.footer .sitemap li {
+  margin-top: 10px;
+}
+.footer .sitemap li:first-child {
+  margin-top: 0;
+}
+.footer .sitemap a {
+  color: #fff;
+}
+.footer .foot {
+  color: #fff;
+  font-size: 1.2rem;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 15px;
 }
 
 .nav-toggle-button {
