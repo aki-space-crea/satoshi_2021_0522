@@ -1063,6 +1063,14 @@ label {
   margin: 0 auto;
 }
 
+.breadcrumb {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+}
+
 .secondly-ttl.side-padding {
   padding: 0 15px;
 }
@@ -1246,7 +1254,7 @@ label {
   border: 1px solid #333;
   border-radius: 30px;
   font-size: 1.4rem;
-  transition-duration: 0.4s;
+  transition: 0.4s;
 }
 .btn-icon {
   height: 10px;
@@ -1256,15 +1264,20 @@ label {
   border-radius: 50%;
   display: block;
   margin-right: 5px;
+  transition: 0.4s;
 }
 .btn-txt {
   display: inline-block;
 }
 .btn:hover {
-  transition-duration: 0.4s;
+  transition: 0.4s;
   border: 1px solid rgba(0, 0, 0, 0);
   background: #333;
   color: #fff;
+}
+.btn:hover .btn-icon {
+  border: 1px solid #fff;
+  transition: 0.4s;
 }
 .btn:focus {
   transition-duration: 0.4s;

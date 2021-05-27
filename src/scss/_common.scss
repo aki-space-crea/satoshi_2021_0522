@@ -59,6 +59,14 @@ label {
   margin: 0 auto;
 }
 
+.breadcrumb {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+}
+
 .secondly-ttl {
   &.side-padding {
     padding: $sidePadding;
