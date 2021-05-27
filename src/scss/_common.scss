@@ -10,7 +10,6 @@ body {
   padding: 0;
   position: relative;
   font-size: 1.6rem;
-  height: 5000px;
 }
 
 ul {
@@ -59,6 +58,41 @@ label {
   margin: 0 auto;
 }
 
+.scroll-down {
+  animation: infiniteScrollDown ease 1.3s infinite;
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  z-index: 9;
+  transform: translateY(-50%);
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+  }
+
+  &::before {
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+  }
+}
+
+@keyframes infiniteScrollDown {
+  0% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(10px);
+  }
+}
+
 .breadcrumb {
   display: flex;
   justify-content: flex-start;
@@ -81,7 +115,7 @@ label {
   z-index: 99999999;
   background: linear-gradient(45deg, #afa, #aaf, #afa);
   background-size : 400% 400%;
-  animation: moveGradient 10s ease infinite;
+  animation: moveGradient 10s ease-in infinite;
   display: flex;
   justify-content: center;
   align-items: center;
