@@ -6,7 +6,7 @@ export const togggleMenu = () => {
     constructor(menuId) {
       this.currentWW = 0;
       this.isPc = () => {
-        return this.current = window.innerWidth;
+        return window.innerWidth;
       }
 
       this.menu = document.getElementById(menuId);
