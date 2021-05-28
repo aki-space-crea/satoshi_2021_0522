@@ -1225,6 +1225,17 @@ label {
   cursor: pointer;
   transition-duration: 0.4s;
 }
+.nav-toggle-button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: #fff;
+  top: -30px;
+  right: -20px;
+  height: 100px;
+  width: 100px;
+  border-radius: 0 0 0 85%;
+}
 @media screen and (min-width: 1024px) {
   .nav-toggle-button {
     opacity: 0;
