@@ -6,19 +6,25 @@ $shadow: 0 6px 10px 0 rgb(0 0 0 / 50%);
 $sidePadding: 0 15px;
 $borderBlack: 1px solid #333;
 
-@import './scss/_normalize.scss';
-@import './scss/_common.scss';
-@import './scss/_header.scss';
-@import './scss/_footer.scss';
-@import './scss/_menu.scss';
-@import './scss/_top.scss';
-@import './scss/_btn.scss';
-@import './scss/_card.scss';
-@import './scss/_list.scss';
-@import './scss/_targetFade.scss';
-@import './scss/_tab.scss';
-@import './scss/_accordion.scss';
+@mixin object-fit($type, $pos-x: 50%, $pos-y: 50%) {
+  object-fit: $type;
+  object-position: $pos-x $pos-y;
+  font-family: #{'"object-fit:' $type "; object-position:" $pos-x $pos-y '"'};
+}
+
+@import "./scss/_normalize.scss";
+@import "./scss/_common.scss";
+@import "./scss/_header.scss";
+@import "./scss/_footer.scss";
+@import "./scss/_menu.scss";
+@import "./scss/_top.scss";
+@import "./scss/_btn.scss";
+@import "./scss/_card.scss";
+@import "./scss/_list.scss";
+@import "./scss/_targetFade.scss";
+@import "./scss/_tab.scss";
+@import "./scss/_accordion.scss";
 
 // swiper
-@import 'swiper/swiper-bundle.css';
-@import './scss/_swiper.scss';
+@import "swiper/swiper-bundle.css";
+@import "./scss/_swiper.scss";

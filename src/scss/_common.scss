@@ -167,3 +167,14 @@ img {
     background: rgba(0, 0, 0, 0.7);
   }
 }
+
+.to-top {
+  position: fixed;
+  z-index: 9;
+  bottom: 30px;
+  right: 30px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.7);
+}

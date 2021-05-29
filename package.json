@@ -36,6 +36,7 @@
     "@fortawesome/fontawesome-free": "^5.15.3",
     "gsap": "^3.6.1",
     "jquery": "^3.6.0",
+    "object-fit-images": "^3.2.4",
     "swiper": "^6.6.2"
   }
 }
