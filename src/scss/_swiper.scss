@@ -13,7 +13,7 @@
 
     a {
       display: block;
-      background: url('../images/orange.png') no-repeat;
+      background: url("../images/orange.png") no-repeat;
       background-size: cover;
       color: $white;
       min-height: 300px;
@@ -29,7 +29,7 @@
       }
 
       &::before {
-        content: '';
+        content: "";
         display: block;
         position: absolute;
         top: 0;
@@ -67,7 +67,7 @@
 
       &::before,
       &::after {
-        font-size: 1.6rem;
+        content: "";
       }
     }
   }

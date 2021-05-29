@@ -1714,5 +1714,5 @@ img {
   transition: 0.4s;
 }
 .slider.-toppage .btn::before, .slider.-toppage .btn::after {
-  font-size: 1.6rem;
+  content: "";
 }
