@@ -8,6 +8,14 @@ import { scrollAnimation } from "./js/_scrollFadeAnimation";
 import { clickedToggle } from "./js/_clickedToggle";
 import { loading } from "./js/_loading";
 import { scaleupImg } from "./js/_scaleup-img";
+import { toTop } from "./js/_toTop";
+
+loading();
+togggleMenu();
+scrollAnimation();
+clickedToggle();
+scaleupImg();
+toTop();
 
 // font-awesome
 import "@fortawesome/fontawesome-free/js/fontawesome";
@@ -21,11 +29,10 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 library.add(fas, far, fab);
 dom.i2svg();
 
-loading();
-togggleMenu();
-scrollAnimation();
-clickedToggle();
-scaleupImg();
+// objectFitImages
+import objectFitImages from "object-fit-images";
+
+objectFitImages();
 
 // コアバージョンに加えて、ナビゲーションとページネーションを追加する
 import SwiperCore, { Navigation, Pagination } from "swiper/core";

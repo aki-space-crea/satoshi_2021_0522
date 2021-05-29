@@ -3229,6 +3229,11 @@
     "define-property" "^0.2.5"
     "kind-of" "^3.0.3"
 
+"object-fit-images@^3.2.4":
+  "integrity" "sha512-G+7LzpYfTfqUyrZlfrou/PLLLAPNC52FTy5y1CBywX+1/FkxIloOyQXBmZ3Zxa2AWO+lMF0JTuvqbr7G5e5CWg=="
+  "resolved" "https://registry.npmjs.org/object-fit-images/-/object-fit-images-3.2.4.tgz"
+  "version" "3.2.4"
+
 "object-is@^1.0.1":
   "integrity" "sha512-3cyDsyHgtmi7I7DfSSI2LDp6SK2lwvtbg0p0R1e0RvTqF5ceGx+K2dfSjm1bKDMVCFEDAQvy+o8c6a7VujOddw=="
   "resolved" "https://registry.npmjs.org/object-is/-/object-is-1.1.5.tgz"
