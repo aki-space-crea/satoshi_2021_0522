@@ -26,7 +26,6 @@ togggleMenu();
 scrollAnimation();
 clickedToggle();
 scaleupImg();
-objectFitImages();
 
 // コアバージョンに加えて、ナビゲーションとページネーションを追加する
 import SwiperCore, { Navigation, Pagination } from "swiper/core";
