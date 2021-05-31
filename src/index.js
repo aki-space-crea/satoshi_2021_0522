@@ -5,6 +5,7 @@ import { clickedToggle } from "./js/_clickedToggle";
 import { loading } from "./js/_loading";
 import { scaleupImg } from "./js/_scaleup-img";
 import { toTop } from "./js/_toTop";
+import { getBlog } from "./js/_getBlog";
 
 loading();
 togggleMenu();
@@ -12,6 +13,7 @@ scrollAnimation();
 clickedToggle();
 scaleupImg();
 toTop();
+getBlog();
 
 // font-awesome
 import "@fortawesome/fontawesome-free/js/fontawesome";
